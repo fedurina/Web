@@ -1,0 +1,223 @@
+/* Сброс стилей */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(135deg, #c7b67f, #b6962a);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header, footer {
+  background: rgba(0, 0, 0, 0.463);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+
+/* Стили формы */
+section {
+  background: white;
+  color: #4a3c0e;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  padding: 2rem;
+  width: 100%;
+  max-width: 450px;
+}
+
+h2 {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.social-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap; 
+}
+
+.social-buttons button img {
+  width: 32px;
+  height: 32px;
+  display: block;
+  margin: 0 auto;
+}
+
+.social-buttons button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-buttons button {
+  background: none;
+  border: 2px solid #ddd;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.social-buttons button:hover {
+  border-color: #7e6615;
+  transform: translateY(-5px);
+}
+
+.input-group {
+  margin-bottom: 1.2rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: border-color 0.3s;
+}
+
+input:focus {
+  border-color:  #7e6615;
+  outline: none;
+}
+
+.remember {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.remember label {
+  margin: 0 0 0 10px;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(to right,  #7e6615,  #968037);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.submit-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Анимации */
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-10px); }
+  75% { transform: translateX(10px); }
+}
+
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.5; }
+  100% { opacity: 1; }
+}
+
+.shake {
+  animation: shake 0.5s ease-in-out;
+}
+
+.loading {
+  animation: pulse 1.5s infinite;
+}
+
+/* Конфетти  */
+.confetti {
+  position: fixed;
+  width: 10px;
+  height: 10px;
+  background: #ff0;
+  opacity: 0;
+}
+
+/* Адаптивность */
+@media (max-width: 480px) {
+  section {
+    padding: 1.5rem;
+  }
+  
+  .social-buttons {
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  .submit-btn {
+    padding: 10px;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  section {
+    max-width: 400px;
+  }
+}
+
+.error-message {
+  position: relative;
+  padding: 12px 20px;
+  background: #fff8e1; 
+  color: #7e6615; 
+  border: 1px solid #ffe0b2;
+  border-radius: 4px;
+  margin: 0 auto 20px auto; 
+  text-align: center;
+  width: 90%; 
+  max-width: 400px;
+  box-shadow: 0 2px 8px rgba(126, 102, 21, 0.15);
+  animation: fadeIn 0.3s ease-out;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.error-message::before {
+  margin-right: 8px;
+  font-size: 18px;
+}
+
+/* Анимация появления */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Анимация исчезновения */
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
