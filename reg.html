@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Авторизация</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Шапка -->
+  <header>
+    <h1>Добро пожаловать</h1>
+  </header>
+
+  <!-- Форма -->
+  <main>
+    <section aria-labelledby="login-heading">
+      <h2 id="login-heading">Вход в систему</h2>
+      <form id="login-form">
+        <!-- Соцсети -->
+        <div class="social-buttons">
+          <button type="button" aria-label="Войти через VK">
+            <img src="../Images/VKk.png" alt="VK">
+          </button>
+          <button type="button" aria-label="Войти через TG">
+            <img src="../Images/TG.png" alt="TG">
+          </button>
+        </div>
+
+        <div class="input-group">
+          <label for="email">Email/Телефон</label>
+          <input 
+            type="text" 
+            id="email" 
+            name="email" 
+            required
+            aria-required="true"
+            autocomplete="username"
+          >
+        </div>
+
+        <div class="input-group">
+          <label for="password">Пароль</label>
+          <input 
+            type="password" 
+            id="password" 
+            name="password" 
+            required
+            aria-required="true"
+            autocomplete="current-password"
+          >
+        </div>
+
+        <!-- Чекбокс и кнопка -->
+        <div class="remember">
+          <input type="checkbox" id="remember" name="remember">
+          <label for="remember">Запомни меня!</label>
+        </div>
+
+        <button type="submit" class="submit-btn">Войти</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Федурина Евгения</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
